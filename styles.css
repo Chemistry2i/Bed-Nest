@@ -201,24 +201,47 @@ p {
 
 /* Hero Section */
 .hero {
-    background-color: var(--surface);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&h=1080&fit=crop&crop=center') center/cover;
     padding: var(--space-3xl) 0;
+    color: white;
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 118, 110, 0.1);
+    pointer-events: none;
 }
 
 .hero-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
     font-size: var(--font-size-5xl);
     margin-bottom: var(--space-lg);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero p {
     font-size: var(--font-size-lg);
     margin-bottom: var(--space-2xl);
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .hero-actions {
