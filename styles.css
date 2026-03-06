@@ -253,6 +253,24 @@ p {
     align-items: end;
 }
 
+.form-grid-inline {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: var(--space-md);
+    align-items: end;
+}
+
+.form-group-button {
+    display: flex;
+    align-items: end;
+}
+
+.btn-check {
+    white-space: nowrap;
+    min-width: 120px;
+    height: 44px;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -350,11 +368,32 @@ p {
 
 .room-image {
     position: relative;
-    height: 200px;
+    height: 250px;
     background-color: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+}
+
+.room-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.room-card:hover .room-img {
+    transform: scale(1.05);
+}
+
+.room-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: var(--space-lg);
+    font-weight: 600;
+    font-size: var(--font-size-lg);
 }
 
 .room-badge {
@@ -367,6 +406,7 @@ p {
     border-radius: var(--border-radius);
     font-size: var(--font-size-sm);
     font-weight: 600;
+    z-index: 2;
 }
 
 .placeholder-image {
@@ -1197,41 +1237,103 @@ p {
 
 .room-option {
     border: var(--border-width) solid var(--border);
-    border-radius: var(--border-radius);
-    padding: var(--space-md);
+    border-radius: var(--border-radius-lg);
     cursor: pointer;
     transition: all 0.2s ease;
+    overflow: hidden;
+    background-color: var(--surface);
+}
+
+.room-option.enhanced-card {
+    display: flex;
+    box-shadow: var(--shadow-sm);
 }
 
 .room-option:hover {
     border-color: var(--brand);
-    background-color: var(--bg);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
 }
 
 .room-option.selected {
     border-color: var(--brand);
     background-color: var(--brand);
     color: white;
+    box-shadow: var(--shadow-lg);
 }
 
 .room-option input[type="radio"] {
     display: none;
 }
 
+.room-option label {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.room-option-image {
+    position: relative;
+    width: 120px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.room-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popularity-badge,
+.value-badge,
+.premium-badge {
+    position: absolute;
+    top: var(--space-xs);
+    left: var(--space-xs);
+    padding: 2px 6px;
+    border-radius: var(--border-radius);
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+.popularity-badge {
+    background-color: var(--accent);
+}
+
+.value-badge {
+    background-color: var(--success);
+}
+
+.premium-badge {
+    background-color: var(--brand);
+}
+
+.room-option-content {
+    flex: 1;
+    padding: var(--space-md);
+}
+
 .room-option-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: var(--space-xs);
+    align-items: flex-start;
+    margin-bottom: var(--space-sm);
 }
 
 .room-option-name {
     font-weight: 600;
+    font-size: var(--font-size-md);
 }
 
 .room-option-price {
     font-weight: 700;
     color: var(--brand);
+    font-size: var(--font-size-md);
+    white-space: nowrap;
 }
 
 .room-option.selected .room-option-price {
@@ -1239,12 +1341,31 @@ p {
 }
 
 .room-option-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xs);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
     font-size: var(--font-size-sm);
     color: var(--text-muted);
 }
 
-.room-option.selected .room-option-features {
+.feature-item i {
+    color: var(--brand);
+    width: 14px;
+    font-size: 12px;
+}
+
+.room-option.selected .feature-item {
     color: rgba(255, 255, 255, 0.9);
+}
+
+.room-option.selected .feature-item i {
+    color: white;
 }
 
 /* Gallery Categories */
@@ -1991,6 +2112,15 @@ p {
         grid-template-columns: 1fr;
     }
     
+    .form-grid-inline {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-check {
+        width: 100%;
+        margin-top: var(--space-sm);
+    }
+    
     .trust-items {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
@@ -2129,6 +2259,20 @@ p {
         flex-direction: column;
         text-align: center;
         gap: var(--space-sm);
+    }
+    
+    /* Room option cards responsive */
+    .room-option.enhanced-card {
+        flex-direction: column;
+    }
+    
+    .room-option-image {
+        width: 100%;
+        height: 120px;
+    }
+    
+    .room-option-features {
+        grid-template-columns: 1fr;
     }
     
     /* Confirmation page responsive */
