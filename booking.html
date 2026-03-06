@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - Bed Nest Hostel | Secure Online Booking</title>
+    <meta name="description" content="Book your stay at Bed Nest hostel. Secure online booking with instant confirmation. Choose from dorm beds and private rooms. Best rates guaranteed.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-bed"></i>
+                    <span>Bed Nest</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="rooms.html" class="nav-link">Rooms</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="tel:+1234567890" class="phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (234) 567-890</span>
+                    </a>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Book Your Stay</h1>
+                <p>Secure your bed in the heart of downtown. Best rates guaranteed!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-form-card">
+                    <h2>Reservation Details</h2>
+                    <form class="booking-form">
+                        <!-- Dates & Guests -->
+                        <div class="form-section">
+                            <h4>When are you staying?</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkin">Check-in Date *</label>
+                                    <input type="date" id="checkin" name="checkin" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkout">Check-out Date *</label>
+                                    <input type="date" id="checkout" name="checkout" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests *</label>
+                                <select id="guests" name="guests" class="form-control" required>
+                                    <option value="">Select number of guests</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5+ Guests (call for availability)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Room Selection -->
+                        <div class="form-section">
+                            <h4>Choose Your Room</h4>
+                            <div class="room-selection">
+                                <div class="room-option">
+                                    <input type="radio" id="room-4bed" name="room" value="4bed" required>
+                                    <label for="room-4bed">
+                                        <div class="room-option-header">
+                                            <span class="room-option-name">4-Bed Mixed Dormitory</span>
+                                            <span class="room-option-price">$28/night</span>
+                                        </div>
+                                        <div class="room-option-features">
+                                            Premium bunk beds • Personal lockers • Reading lights • Shared bathroom
+                                        </div>
+                                    </label>
+                                </div>
+                                
+                                <div class="room-option">
+                                    <input type="radio" id="room-6bed" name="room" value="6bed" required>
+                                    <label for="room-6bed">
+                                        <div class="room-option-header">
+                                            <span class="room-option-name">6-Bed Mixed Dormitory</span>
+                                            <span class="room-option-price">$22/night</span>
+                                        </div>
+                                        <div class="room-option-features">
+                                            Budget-friendly • Personal lockers • Reading lights • Shared bathroom
+                                        </div>
+                                    </label>
+                                </div>
+                                
+                                <div class="room-option">
+                                    <input type="radio" id="room-private" name="room" value="private" required>
+                                    <label for="room-private">
+                                        <div class="room-option-header">
+                                            <span class="room-option-name">Private Double Room</span>
+                                            <span class="room-option-price">$65/night</span>
+                                        </div>
+                                        <div class="room-option-features">
+                                            Queen bed • Private bathroom • TV • Mini fridge • Desk
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Guest Information -->
+                        <div class="form-section">
+                            <h4>Guest Information</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstname">First Name *</label>
+                                    <input type="text" id="firstname" name="firstname" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname">Last Name *</label>
+                                    <input type="text" id="lastname" name="lastname" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="country">Country *</label>
+                                    <select id="country" name="country" class="form-control" required>
+                                        <option value="">Select country</option>
+                                        <option value="US">United States</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="FR">France</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Age *</label>
+                                    <input type="number" id="age" name="age" class="form-control" min="18" max="100" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Requests -->
+                        <div class="form-section">
+                            <h4>Special Requests</h4>
+                            <div class="form-group">
+                                <label for="arrival">Estimated Arrival Time</label>
+                                <select id="arrival" name="arrival" class="form-control">
+                                    <option value="">Select arrival time</option>
+                                    <option value="afternoon">3:00 PM - 6:00 PM</option>
+                                    <option value="evening">6:00 PM - 9:00 PM</option>
+                                    <option value="night">9:00 PM - 11:00 PM</option>
+                                    <option value="late">After 11:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="requests">Special Requests or Notes</label>
+                                <textarea id="requests" name="requests" class="form-control" placeholder="Dietary requirements, accessibility needs, early check-in, etc."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions -->
+                        <div class="form-section">
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" required>
+                                    <span>I agree to the <a href="#" style="color: var(--brand);">Terms and Conditions</a> and <a href="#" style="color: var(--brand);">Cancellation Policy</a> *</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span>I would like to receive email updates about promotions and events</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: var(--space-md);">
+                            <i class="fas fa-lock"></i> Secure Booking - Complete Reservation
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Booking Summary -->
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    
+                    <div class="summary-section">
+                        <h4>Selected Room</h4>
+                        <p id="selected-room">Please select a room</p>
+                    </div>
+                    
+                    <div class="summary-section">
+                        <h4>Stay Duration</h4>
+                        <p id="stay-dates">Please select dates</p>
+                        <p id="stay-nights">0 nights</p>
+                    </div>
+                    
+                    <div class="price-breakdown">
+                        <div class="summary-item">
+                            <span>Room rate (per night)</span>
+                            <span id="room-rate">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Number of nights</span>
+                            <span id="nights-count">0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Subtotal</span>
+                            <span id="subtotal">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>City tax (per person/night)</span>
+                            <span id="city-tax">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Security deposit (refundable)</span>
+                            <span>$20</span>
+                        </div>
+                        <div class="summary-item">
+                            <span><strong>Total Amount</strong></span>
+                            <span><strong id="total-amount">$20</strong></span>
+                        </div>
+                    </div>
+                    
+                    <div class="included-amenities">
+                        <h4>What's Included</h4>
+                        <ul>
+                            <li><i class="fas fa-wifi"></i> Free high-speed WiFi</li>
+                            <li><i class="fas fa-coffee"></i> Continental breakfast</li>
+                            <li><i class="fas fa-tshirt"></i> Laundry facilities</li>
+                            <li><i class="fas fa-shield-alt"></i> 24/7 security</li>
+                            <li><i class="fas fa-utensils"></i> Shared kitchen access</li>
+                            <li><i class="fas fa-luggage-cart"></i> Luggage storage</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-support">
+                        <h4>Need Help?</h4>
+                        <p>Our team is here 24/7</p>
+                        <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+                        <p><i class="fas fa-envelope"></i> info@bednest.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="booking-trust">
+        <div class="container">
+            <div class="trust-indicators">
+                <div class="trust-indicator">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h3>Secure Booking</h3>
+                        <p>SSL encryption protects your personal and payment information</p>
+                    </div>
+                </div>
+                
+                <div class="trust-indicator">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Instant Confirmation</h3>
+                        <p>Receive booking confirmation immediately via email</p>
+                    </div>
+                </div>
+                
+                <div class="trust-indicator">
+                    <i class="fas fa-ban"></i>
+                    <div>
+                        <h3>Free Cancellation</h3>
+                        <p>Cancel up to 24 hours before arrival with no charge</p>
+                    </div>
+                </div>
+                
+                <div class="trust-indicator">
+                    <i class="fas fa-dollar-sign"></i>
+                    <div>
+                        <h3>Best Rate Guarantee</h3>
+                        <p>Found a lower rate? We'll match it plus give you 10% off</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-bed"></i>
+                        <span>Bed Nest</span>
+                    </div>
+                    <p>Premium budget accommodation in the heart of downtown. Your comfort is our priority.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="rooms.html">Rooms & Rates</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Policies</h3>
+                    <ul>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">House Rules</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Downtown Street, City Center, State 12345</p>
+                        <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+                        <p><i class="fas fa-envelope"></i> info@bednest.com</p>
+                        <p><i class="fas fa-clock"></i> Check-in: 3:00 PM | Check-out: 11:00 AM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bed Nest Hostel. All rights reserved. | Last updated: March 2026</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
