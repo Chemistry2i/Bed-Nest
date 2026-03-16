@@ -264,7 +264,7 @@ p {
 .quick-booking h3 {
     text-align: center;
     margin-bottom: var(--space-lg);
-    color: var(--text-color);
+    color: var(--text);
     text-shadow: none;
 }
 
@@ -531,12 +531,12 @@ p {
     gap: var(--space-2xl);
 }
 
-.step {
+.how-it-works .step {
     text-align: center;
     padding: var(--space-lg);
 }
 
-.step-icon {
+.how-it-works .step-icon {
     width: 80px;
     height: 80px;
     background-color: var(--brand);
@@ -550,13 +550,13 @@ p {
     transition: all 0.3s ease;
 }
 
-.step:hover .step-icon {
+.how-it-works .step:hover .step-icon {
     background-color: var(--accent);
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(15, 118, 110, 0.3);
 }
 
-.step h3 {
+.how-it-works .step h3 {
     color: var(--text);
     margin-bottom: var(--space-sm);
 }
@@ -2104,7 +2104,7 @@ p {
     gap: var(--space-lg);
 }
 
-.step {
+.steps-list .step {
     display: flex;
     gap: var(--space-md);
     padding: var(--space-md);
@@ -2113,7 +2113,7 @@ p {
     border-radius: var(--border-radius);
 }
 
-.step i {
+.steps-list .step i {
     color: var(--brand);
     font-size: var(--font-size-lg);
     margin-top: var(--space-xs);
@@ -2121,7 +2121,7 @@ p {
     flex-shrink: 0;
 }
 
-.step h4 {
+.steps-list .step h4 {
     color: var(--text);
     margin-bottom: var(--space-xs);
 }
